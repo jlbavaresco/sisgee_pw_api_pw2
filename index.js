@@ -29,5 +29,5 @@ app.route('/salas/:codigo')
    .delete(controleSalas.deleteSala)   
 
 app.listen(process.env.port || 3002, () => {
-    console.log('Servidor da API rodando...')
+    console.log('Servidor da API rodando....')
 })
