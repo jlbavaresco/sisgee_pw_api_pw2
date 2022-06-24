@@ -42,7 +42,7 @@ const updatePredio = (request, response) => {
         if (error){
             return response.status(400).json({
                 status : 'error',
-                message: 'Erro ao alterar o prédio!'
+                message: 'Erro ao alterar o prédio! ' + error
             });
         }
         response.status(200).json({
