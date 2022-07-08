@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "bc07629f-cd49-40d0-9276-9b2678ae6c0c",
+		"name": "API_PW2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET todos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbF91c3VhcmlvIjoiam9hb0BpZnN1bC5lZHUuYnIiLCJub21lX3VzdWFyaW8iOiJKb8OjbyIsInRpcG9fdXN1YXJpbyI6IkEiLCJpYXQiOjE2NTcyODE5MTUsImV4cCI6MTY1NzI4MjIxNX0.BGUg0GhQ8eti8-rA0hJ03rgZB7V-rRWTmsGMQGf74o0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://sisgeeapipw2.herokuapp.com/predios",
+					"protocol": "https",
+					"host": [
+						"sisgeeapipw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"predios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"nome\": \"Predio 3\",\n        \"descricao\": \"Predio da Mecânica\",\n        \"sigla\": \"P3\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sisgeeapipw2.herokuapp.com/predios",
+					"protocol": "https",
+					"host": [
+						"sisgeeapipw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"predios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"codigo\": 4,\n        \"nome\": \"Predio 3\",\n        \"descricao\": \"Predio da Mecânica\",\n        \"sigla\": \"P3\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sisgeeapipw2.herokuapp.com/predios",
+					"protocol": "https",
+					"host": [
+						"sisgeeapipw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"predios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apagar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sisgeeapipw2.herokuapp.com/predios/4",
+					"protocol": "https",
+					"host": [
+						"sisgeeapipw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"predios",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get por codigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sisgeeapipw2.herokuapp.com/predios/1",
+					"protocol": "https",
+					"host": [
+						"sisgeeapipw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"predios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETSalas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbF91c3VhcmlvIjoiam9hb0BpZnN1bC5lZHUuYnIiLCJub21lX3VzdWFyaW8iOiJKb8OjbyIsInRpcG9fdXN1YXJpbyI6IkEiLCJpYXQiOjE2NTcyODE1NjgsImV4cCI6MTY1NzI4MTg2OH0.jYaNcM4lDWiaAGVw9WO7bsqRYelw9WRi30rext7zWxI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3002/salas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addsala",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"numero\": 511,\n        \"descricao\": \"Laboratório\",\n        \"capacidade\": 12,\n        \"predio\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sisgeeapipw2.herokuapp.com/salas",
+					"protocol": "https",
+					"host": [
+						"sisgeeapipw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"salas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSala",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"codigo\": 6,\n        \"numero\": 512,\n        \"descricao\": \"Laboratório\",\n        \"capacidade\": 12,\n        \"predio\": 7\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/salas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSala",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/salas/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getsalaporcodigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/salas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"joao@ifsul.edu.br\", \"senha\": \"123456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sisgeeapipw2.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"sisgeeapipw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
