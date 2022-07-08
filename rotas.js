@@ -2,25 +2,28 @@ const { Router }  = require('express');
 
 const controlePredios = require("./controladores/predios");
 const controleSalas = require("./controladores/salas");
+const controleSeguranca = require("./controladores/seguranca")
 
 const rotas = new Router();
 
 rotas.route('/predios')
-   .get(controlePredios.getPredios)
-   .post(controlePredios.addPredio)
-   .put(controlePredios.updatePredio)
+   .get(controleSeguranca.verificaJWT, controlePredios.getPredios)
+   .post(controleSeguranca.verificaJWT, controlePredios.addPredio)
+   .put(controleSeguranca.verificaJWT, controlePredios.updatePredio)
 
 rotas.route('/predios/:codigo')
-   .get(controlePredios.getPredioPorCodigo)
-   .delete(controlePredios.deletePredio)
+   .get(controleSeguranca.verificaJWT, controlePredios.getPredioPorCodigo)
+   .delete(controleSeguranca.verificaJWT, controlePredios.deletePredio)
 
 rotas.route('/salas')
-   .get(controleSalas.getSalas)
-   .post(controleSalas.addSala)
-   .put(controleSalas.updateSala)
+   .get(controleSeguranca.verificaJWT, controleSalas.getSalas)
+   .post(controleSeguranca.verificaJWT, controleSalas.addSala)
+   .put(controleSeguranca.verificaJWT, controleSalas.updateSala)
 
 rotas.route('/salas/:codigo')
-   .get(controleSalas.getSalaPorCodigo)
-   .delete(controleSalas.deleteSala)
+   .get(controleSeguranca.verificaJWT, controleSalas.getSalaPorCodigo)
+   .delete(controleSeguranca.verificaJWT, controleSalas.deleteSala)
+
+rotas.route("/login").post(controleSeguranca.login)
 
 module.exports = rotas;
